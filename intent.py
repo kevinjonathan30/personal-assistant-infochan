@@ -57,10 +57,10 @@ def process_intent(command):
         processor.say('Sure, searching...')
         try:
             try:
-                res = processor.client.Input(command)
-                outputs = next(res.outputs).text
+                res = processor.client.query(command)
+                answer = next(res.results).text
                 processor.say('If I remember correctly..')
-                processor.say(outputs)
+                processor.say(answer)
 
             except:
                 outputs = wikipedia.summary(command, sentences=3)

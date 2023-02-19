@@ -6,7 +6,7 @@ import config
 
 engine = pyttsx3.init('sapi5')
 
-client = wolframalpha.Client(config.api_key)
+client = wolframalpha.Client(config.app_id)
 
 rate = engine.getProperty('rate')
 engine.setProperty('rate', 150)
