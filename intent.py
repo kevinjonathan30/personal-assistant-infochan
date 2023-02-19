@@ -37,7 +37,7 @@ def process_intent(command):
 
     elif 'play music' in command:
         music_folder = 'C:\\Users\\Public\\Music\\'
-
+        processor.say('Okay, what\'s the music title?')
         music_title = processor.give_command()
         music = music_folder + music_title + '.mp3'
         os.system(music)
@@ -46,6 +46,7 @@ def process_intent(command):
 
     elif 'show images' in command:
         images_folder = 'C:\\Users\\Public\\Pictures\\'
+        processor.say('Okay, what\'s the image name?')
         image_title = processor.give_command()
         image = images_folder + image_title + '.jpeg'
         os.system(image)
